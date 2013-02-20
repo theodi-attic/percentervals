@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @percenterval.date %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @percenterval.name %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @percenterval.hours %>
+</p>
+
+
+<%= link_to 'Edit', edit_percenterval_path(@percenterval) %> |
+<%= link_to 'Back', percentervals_path %>

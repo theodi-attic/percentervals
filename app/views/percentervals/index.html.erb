@@ -1,0 +1,27 @@
+<h1>Listing percentervals</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Hours</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @percentervals.each do |percenterval| %>
+  <tr>
+    <td><%= percenterval.date %></td>
+    <td><%= percenterval.name %></td>
+    <td><%= percenterval.hours %></td>
+    <td><%= link_to 'Show', percenterval %></td>
+    <td><%= link_to 'Edit', edit_percenterval_path(percenterval) %></td>
+    <td><%= link_to 'Destroy', percenterval, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Percenterval', new_percenterval_path %>
